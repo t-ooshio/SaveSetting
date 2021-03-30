@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SaveSetting</string>
+    <string name="btn_save">設定保存</string>
+</resources>
