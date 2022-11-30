@@ -20,17 +20,15 @@ public class MainActivity extends AppCompatActivity {
         btnSettingSave = (Button)findViewById(R.id.buttonSave);
         tvResult = (TextView)findViewById(R.id.tvResult);
         SaveSettingLog savelog = new SaveSettingLog(this);
-        SaveSettingUsecase usecase = new SaveSettingUsecase();
+        final SaveSettingUsecase usecase = new SaveSettingUsecase();
 
         btnSettingSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showToast("btnClick");
-                clearText();
+                usecase.getSetting();
             }
         });
 
-        setText("TEST");
     }
 
     protected void setText(String str){
